@@ -1,0 +1,16 @@
+{
+  "name": "eos-rex-2.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@wharfkit/antelope": "^1.0.7",
+    "@wharfkit/common": "^1.2.0",
+    "@wharfkit/contract": "^1.1.5",
+    "commander": "^12.1.0"
+  }
+}
