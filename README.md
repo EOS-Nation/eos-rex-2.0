@@ -75,11 +75,8 @@ ce9...???  ./build/contracts/eosio.system/eosio.system.abi
 https://github.com/eosnetworkfoundation/eos-system-contracts/releases
 
 - [x] 1.1 Deploy updated `eosio` system contract including REX 2.0
-
 - [x] 1.2 Deploy new `eosio.reward` contract
-
 - [x] 1.3 Deploy new `eosio.bpay` contract
-
   - [x] 1.3.1 Update permission `eosio.bpay` (15/21) (`eosio` + `@eosio.code`)
 
 #### Configure System Fees & Staking Rewards strategies
