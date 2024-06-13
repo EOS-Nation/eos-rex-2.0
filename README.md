@@ -56,16 +56,16 @@ export CDT_INSTALL_DIR="<path>/cdt/build"
 ## Contract `sha-256` checksums
 ```bash
 $ shasum -a 256 ./build/contracts/**/*.wasm
+c4b8c6af91661644eeac2ea6ad7ce96e4d8510b8a950da5aaa6e07ed61a62cf1  ./build/contracts/eosio.bpay/eosio.bpay.wasm
 c586608a9feac6ef51f391d4bf6f4b11178853af351a0953a0d153df48e2fedb  ./build/contracts/eosio.reward/eosio.reward.wasm
-b78...???  ./build/contracts/eosio.bpay/eosio.bpay.wasm
-0a1...???  ./build/contracts/eosio.system/eosio.system.wasm
+3233458480171d3fc1d0078b17729fbe7c84fd59a7909a27c2adde59c8d3b764  ./build/contracts/eosio.system/eosio.system.wasm
 ```
 
 ```bash
 $ shasum -a 256 ./build/contracts/**/*.abi
+fcd1960fae39b8af487bdf16a28527dbb94032b38b3640e1b417e6b726323fe2  ./build/contracts/eosio.bpay/eosio.bpay.abi
 0d7a49cbecce535e1eb4cd308f639a93633e0c0a51d6362643afa0001b9c02d8  ./build/contracts/eosio.reward/eosio.reward.abi
-ce9...???  ./build/contracts/eosio.system/eosio.system.abi
-696...???  ./build/contracts/eosio.bpay/eosio.bpay.abi
+1c0dabda4d7051db3c53101439d8831fb64e8b4b773fda1e00d3d3fdfd318041  ./build/contracts/eosio.system/eosio.system.abi
 ```
 
 ### MSIG - EOS REX 2.0
