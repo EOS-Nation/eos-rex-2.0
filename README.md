@@ -74,13 +74,17 @@ ce9...???  ./build/contracts/eosio.system/eosio.system.abi
 
 https://github.com/eosnetworkfoundation/eos-system-contracts/releases
 
-1.1 Deploy updated `eosio` system contract including REX 2.0
-1.2 Deploy new `eosio.reward` contract
-1.3 Deploy new `eosio.bpay` contract
-  1.3.1 Update permission `eosio.bpay` (15/21) (`eosio` + `@eosio.code`)
+- 1.1 Deploy updated `eosio` system contract including REX 2.0
+
+- 1.2 Deploy new `eosio.reward` contract
+
+- 1.3 Deploy new `eosio.bpay` contract
+
+  - 1.3.1 Update permission `eosio.bpay` (15/21) (`eosio` + `@eosio.code`)
 
 #### Configure System Fees & Staking Rewards strategies
-2.1 Set incoming fees to 100% go to top 21 producers `eosio.bpay` strategy
+
+- 2.1 Set incoming fees to 100% go to top 21 producers `eosio.bpay` strategy
 
 **eosio.fees::setstrategy**
 ```json
@@ -90,7 +94,7 @@ https://github.com/eosnetworkfoundation/eos-system-contracts/releases
 }
 ```
 
-2.2 Delete previous `donatetorex` strategy from fees
+- 2.2 Delete previous `donatetorex` strategy from fees
 
 **eosio.fees::delstrategy**
 ```json
@@ -99,7 +103,7 @@ https://github.com/eosnetworkfoundation/eos-system-contracts/releases
 }
 ```
 
-2.3 Set incoming staking reward allocation to 100% going to REX via `eosio.rex` strategy
+- 2.3 Set incoming staking reward allocation to 100% going to REX via `eosio.rex` strategy
 
 **eosio.reward::setstrategy**
 
@@ -111,9 +115,10 @@ https://github.com/eosnetworkfoundation/eos-system-contracts/releases
 ```
 
 #### Configure REX 2.0 features
-3.1 Set REX maturity to `21 periods` (previously `5 periods`)
-3.2 Set matured REX is sold immediately to `true`
-3.3 Set buying REX is moved immediately to REX savings to `true`
+
+- 3.1 Set REX maturity to `21 periods` (previously `5 periods`)
+- 3.2 Set matured REX is sold immediately to `true`
+- 3.3 Set buying REX is moved immediately to REX savings to `true`
 
 **eosio::rexmaturity**
 ```json
@@ -126,7 +131,7 @@ https://github.com/eosnetworkfoundation/eos-system-contracts/releases
 
 #### Set MSIG earliest execution time
 
-4. MSIG can only be executed after July 8th 00:00:00 UTC
+- 4. MSIG can only be executed after July 8th 00:00:00 UTC
 
 **time.eosn::checktime**
 
