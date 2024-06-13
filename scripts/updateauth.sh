@@ -1,0 +1,2 @@
+# eosio.bpay
+eosc -u https://eos.api.eosnation.io system updateauth eosio.bpay active owner eosio.bpay@active.yml --skip-sign --write-transaction actions/updateauth-eosio.bpay.json  --expiration 8640000

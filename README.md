@@ -56,14 +56,14 @@ export CDT_INSTALL_DIR="<path>/cdt/build"
 ## Contract `sha-256` checksums
 ```bash
 $ shasum -a 256 ./build/contracts/**/*.wasm
-c54...???  ./build/contracts/eosio.reward/eosio.reward.wasm
+c586608a9feac6ef51f391d4bf6f4b11178853af351a0953a0d153df48e2fedb  ./build/contracts/eosio.reward/eosio.reward.wasm
 b78...???  ./build/contracts/eosio.bpay/eosio.bpay.wasm
 0a1...???  ./build/contracts/eosio.system/eosio.system.wasm
 ```
 
 ```bash
 $ shasum -a 256 ./build/contracts/**/*.abi
-1b7...???  ./build/contracts/eosio.reward/eosio.reward.abi
+0d7a49cbecce535e1eb4cd308f639a93633e0c0a51d6362643afa0001b9c02d8  ./build/contracts/eosio.reward/eosio.reward.abi
 ce9...???  ./build/contracts/eosio.system/eosio.system.abi
 696...???  ./build/contracts/eosio.bpay/eosio.bpay.abi
 ```

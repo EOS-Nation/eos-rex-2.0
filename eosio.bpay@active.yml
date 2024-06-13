@@ -1,0 +1,10 @@
+threshold: 1
+accounts:
+- permission:
+    actor: eosio
+    permission: active
+  weight: 1
+- permission:
+    actor: eosio.bpay
+    permission: eosio.code
+  weight: 1

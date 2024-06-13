@@ -1,0 +1,25 @@
+{"chain_id":"aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+  "expiration": "2024-09-21T21:42:26",
+  "ref_block_num": 51429,
+  "ref_block_prefix": 3254460211,
+  "max_net_usage_words": 0,
+  "max_cpu_usage_ms": 0,
+  "delay_sec": 0,
+  "context_free_actions": [],
+  "actions": [
+    {
+      "account": "eosio",
+      "name": "updateauth",
+      "authorization": [
+        {
+          "actor": "eosio.bpay",
+          "permission": "active"
+        }
+      ],
+      "data": "008037f500ea305500000000a8ed32320000000080ab26a70100000000020000000000ea305500000000a8ed32320100008037f500ea305500804a1401ea3055010000"
+    }
+  ],
+  "transaction_extensions": [],
+  "signatures": [],
+  "context_free_data": []
+}
