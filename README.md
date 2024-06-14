@@ -133,7 +133,7 @@ https://github.com/eosnetworkfoundation/eos-system-contracts/releases
 - [x] 3.2 Set matured REX is sold immediately to `true`
 - [x] 3.3 Set buying REX is moved immediately to REX savings to `true`
 
-**eosio::rexmaturity**
+**eosio::setrexmature**
 ```json
 {
     "num_of_maturity_buckets": 21,
