@@ -2,7 +2,7 @@
 
 > [v3.5.0 Release Notes](https://github.com/eosnetworkfoundation/eos-system-contracts/releases/tag/v3.5.0)
 
-### REX 2.0 distribution flowchart
+### REX 2.0 token distribution
 
 ```mermaid
 graph TD
@@ -18,6 +18,22 @@ graph TD
     eosio.saving --> percent{% percent}
     eosio.reward --> weights_rewards{% weights}
     weights_rewards --> |100% Donate To REX 2.0| eosio.rex(eosio.rex)
+```
+
+### `eosio.bpay` token distribution
+
+The `eosio.bpay` contract handles block production rewards accumulated through network fees.
+
+```mermaid
+graph TD
+    eosio --> |System fees in EOS| eosio.fees
+    eosio.fees --> |EOS Transfer| eosio.bpay
+    eosio.bpay --> top{21 Producers}
+    top --> bp1
+    top --> bp2
+    top --> bp...
+    top --> bp20
+    top --> bp21
 ```
 
 ### Allocations (Annual Rate)
@@ -56,9 +72,9 @@ export CDT_INSTALL_DIR="<path>/cdt/build"
 ## Contract `sha-256` checksums
 ```bash
 $ shasum -a 256 ./build/contracts/**/*.wasm
-c4b8c6af91661644eeac2ea6ad7ce96e4d8510b8a950da5aaa6e07ed61a62cf1  ./build/contracts/eosio.bpay/eosio.bpay.wasm
-c586608a9feac6ef51f391d4bf6f4b11178853af351a0953a0d153df48e2fedb  ./build/contracts/eosio.reward/eosio.reward.wasm
-3233458480171d3fc1d0078b17729fbe7c84fd59a7909a27c2adde59c8d3b764  ./build/contracts/eosio.system/eosio.system.wasm
+32181be084b539d882d92ff85a3d0b9962c8cb7292902cc558bc9a77dedd8fa9  ./build/contracts/eosio.bpay/eosio.bpay.wasm
+18fd47b9acfb7b54d88d2a78d91bba23cd23c00ed6fddaa8651badcd55885ed6  ./build/contracts/eosio.reward/eosio.reward.wasm
+ad12d594b75bdb4ab84c568f29d97f1ce82f50cca55a1f8a7d0406d4728d0e4b  ./build/contracts/eosio.system/eosio.system.wasm
 ```
 
 ```bash
