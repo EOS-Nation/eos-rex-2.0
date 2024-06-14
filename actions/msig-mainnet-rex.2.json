@@ -121,6 +121,17 @@
                 }
             ],
             "data": "011500000001010101"
+        },
+        {
+            "account": "time.eosn",
+            "name": "checktime",
+            "authorization": [
+                {
+                    "actor": "eosio",
+                    "permission": "active"
+                }
+            ],
+            "data": "00002318b11c0600"
         }
     ]
 }
