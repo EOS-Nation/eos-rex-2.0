@@ -51,7 +51,7 @@ export function setrexmature(num_of_maturity_buckets = 21, sell_matured_rex = tr
         name: "setrexmature",
         authorization: [{
             actor: "eosio",
-            permission: "owner"
+            permission: "active"
         }],
         data: Serializer.encode({object: System.Types.setrexmature.from({
             num_of_maturity_buckets,
