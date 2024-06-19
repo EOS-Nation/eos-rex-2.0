@@ -45,6 +45,23 @@ export function delstrategy(account = "eosio.fees", strategy: string) {
 }
 
 // Configure REX 2.0 features
+export function buyram(payer: string, receiver: string, bytes: number) {
+    transaction.actions.push({
+        account: "eosio",
+        name: "buyram",
+        authorization: [{
+            actor: payer,
+            permission: "active"
+        }],
+        data: Serializer.encode({object: System.Types.buyrambytes.from({
+            payer,
+            receiver,
+            bytes,
+        })}).hexString,
+    })
+}
+
+// Configure REX 2.0 features
 export function setrexmature(num_of_maturity_buckets = 21, sell_matured_rex = true, buy_rex_to_savings = true) {
     transaction.actions.push({
         account: "eosio",

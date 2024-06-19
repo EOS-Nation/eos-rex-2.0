@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { delstrategy, setrexmature, setstrategy, transaction } from "./msig-actions.js";
+import { buyram, delstrategy, setrexmature, setstrategy, transaction } from "./msig-actions.js";
 
 // setcontracts
 import eosio_system from '../actions/setcontract-eosio.system.json';
@@ -9,6 +9,9 @@ import eosio_bpay_update_auth from '../actions/updateauth-eosio.bpay.json';
 
 // actions
 import { checktime } from "./msig-actions.js";
+
+// 1.3.0 Buy RAM for `eosio.bpay` account
+buyram("eosio", "eosio.bpay", 200000);
 
 // 1.1 Deploy updated `eosio` system contract including REX 2.0
 // 1.2 Deploy new `eosio.reward` contract

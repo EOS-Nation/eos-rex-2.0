@@ -59,13 +59,24 @@ cmake ..
 make -j $(nproc)
 ```
 
-## [Compile EOS System Contracts](https://github.com/eosnetworkfoundation/eos-system-contracts/releases/tag/v3.5.0) (`v3.5.0`)
+## [Compile EOS System Contracts](https://github.com/eosnetworkfoundation/eos-system-contracts/releases/tag/v3.5.0-rc1
+) (`v3.5.0-rc1`)
 
 ```bash
 gh repo clone eosnetworkfoundation/eos-system-contracts
 cd eos-system-contracts
-git checkout v3.5.0
+git checkout v3.5.0-rc1
 export CDT_INSTALL_DIR="<path>/cdt/build"
+./build.sh
+```
+
+## [Compile EOS System Contracts](https://github.com/eosnetworkfoundation/eosio.reward/releases/tag/v1.0.0-rc1
+) (`v1.0.0-rc1`)
+
+```bash
+gh repo clone eosnetworkfoundation/eosio.reward
+cd eosio.reward
+git checkout v1.0.0-rc1
 ./build.sh
 ```
 
@@ -73,26 +84,29 @@ export CDT_INSTALL_DIR="<path>/cdt/build"
 ```bash
 $ shasum -a 256 ./build/contracts/**/*.wasm
 32181be084b539d882d92ff85a3d0b9962c8cb7292902cc558bc9a77dedd8fa9  ./build/contracts/eosio.bpay/eosio.bpay.wasm
-18fd47b9acfb7b54d88d2a78d91bba23cd23c00ed6fddaa8651badcd55885ed6  ./build/contracts/eosio.reward/eosio.reward.wasm
+49155e7e98991d9dad21970bb1d1cfec0d5ab77e842feaaa0dac1d1a91180cc7  ./build/contracts/eosio.reward/eosio.reward.wasm
 ad12d594b75bdb4ab84c568f29d97f1ce82f50cca55a1f8a7d0406d4728d0e4b  ./build/contracts/eosio.system/eosio.system.wasm
 ```
 
 ```bash
 $ shasum -a 256 ./build/contracts/**/*.abi
-fcd1960fae39b8af487bdf16a28527dbb94032b38b3640e1b417e6b726323fe2  ./build/contracts/eosio.bpay/eosio.bpay.abi
-0d7a49cbecce535e1eb4cd308f639a93633e0c0a51d6362643afa0001b9c02d8  ./build/contracts/eosio.reward/eosio.reward.abi
-1c0dabda4d7051db3c53101439d8831fb64e8b4b773fda1e00d3d3fdfd318041  ./build/contracts/eosio.system/eosio.system.abi
+1cef6917b10be533e0ea66d794c50973f023002e608e33280277e74c79aa8dcc  ./build/contracts/eosio.bpay/eosio.bpay.abi
+3254b63a2727591f51a28aceef9305988aec9b025fd1bae97b3ebc33ac687926  ./build/contracts/eosio.reward/eosio.reward.abi
+c3a51886165436519ed0c6aa0854e6b777c1564b030a6f2c3a0e0a568104cef2  ./build/contracts/eosio.system/eosio.system.abi
 ```
 
 ### MSIG - EOS REX 2.0
 
 #### Deploy System Contracts
 
-https://github.com/eosnetworkfoundation/eos-system-contracts/releases
+https://github.com/eosnetworkfoundation/eos-system-contracts/releases/tag/v3.5.0-rc1
+
+https://github.com/eosnetworkfoundation/eosio.reward/releases/tag/v1.0.0-rc1
 
 - [x] 1.1 Deploy updated `eosio` system contract including REX 2.0
 - [x] 1.2 Deploy new `eosio.reward` contract
 - [x] 1.3 Deploy new `eosio.bpay` contract
+  - [x] 1.3.0 Buy 200KB of RAM for `eosio.bpay` contract
   - [x] 1.3.1 Update permission `eosio.bpay` (15/21) (`eosio` + `@eosio.code`)
 
 #### Configure System Fees & Staking Rewards strategies
