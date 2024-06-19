@@ -44,11 +44,10 @@ export function delstrategy(account = "eosio.fees", strategy: string) {
     })
 }
 
-// Configure REX 2.0 features
-export function buyram(payer: string, receiver: string, bytes: number) {
+export function buyrambytes(payer: string, receiver: string, bytes: number) {
     transaction.actions.push({
         account: "eosio",
-        name: "buyram",
+        name: "buyrambytes",
         authorization: [{
             actor: payer,
             permission: "active"

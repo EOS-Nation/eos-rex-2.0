@@ -3,7 +3,7 @@
     "actions": [
         {
             "account": "eosio",
-            "name": "buyram",
+            "name": "buyrambytes",
             "authorization": [
                 {
                     "actor": "eosio",
