@@ -2,6 +2,7 @@ import { Serializer } from "@wharfkit/antelope";
 import * as System from "../codegen/eosio.system.js"
 import * as Time from "../codegen/time.eosn.js"
 import * as Fees from "../codegen/eosio.fees.js"
+import * as Saving from "../codegen/eosio.saving.js"
 
 export interface Action {
     account: string;
@@ -27,6 +28,20 @@ export function setstrategy(account = "eosio.fees", strategy: string, weight: nu
             strategy,
             weight
         })}).hexString,
+    })
+}
+
+export function setdistrib(accounts: {account: string, percent: number}[]) {
+    transaction.actions.push({
+        account: "eosio.saving",
+        name: "setdistrib",
+        authorization: [{
+            actor: "eosio.saving",
+            permission: "active"
+        }],
+        data: Serializer.encode({object: Saving.Types.setdistrib.from({
+            accounts
+        })}).hexString
     })
 }
 

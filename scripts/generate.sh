@@ -5,3 +5,4 @@ npx @wharfkit/cli generate --json ./build/contracts/eosio.reward/eosio.reward.ab
 # existing
 npx @wharfkit/cli generate --url https://eos.greymass.com --file ./codegen/time.eosn.ts time.eosn
 npx @wharfkit/cli generate --url https://eos.greymass.com --file ./codegen/eosio.fees.ts eosio.fees
+npx @wharfkit/cli generate --url https://eos.greymass.com --file ./codegen/eosio.saving.ts eosio.saving
