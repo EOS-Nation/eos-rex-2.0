@@ -30,6 +30,21 @@ export function setstrategy(account = "eosio.fees", strategy: string, weight: nu
     })
 }
 
+// 7.2 Initialize fees contract to 600 seconds per epoch period
+export function init_fees(epoch_period: number) {
+    transaction.actions.push({
+        account: "eosio.fees",
+        name: "init",
+        authorization: [{
+            actor: "eosio.fees",
+            permission: "owner"
+        }],
+        data: Serializer.encode({object: Fees.Types.init.from({
+            epoch_period,
+        })}).hexString
+    })
+}
+
 export function delstrategy(account = "eosio.fees", strategy: string) {
     transaction.actions.push({
         account,

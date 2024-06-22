@@ -1,0 +1,16 @@
+{
+    "expiration": "2025-01-01T00:00:00",
+    "actions": [
+        {
+            "account": "eosio",
+            "name": "setrexmature",
+            "authorization": [
+                {
+                    "actor": "eosio",
+                    "permission": "active"
+                }
+            ],
+            "data": "010100000001010101"
+        }
+    ]
+}

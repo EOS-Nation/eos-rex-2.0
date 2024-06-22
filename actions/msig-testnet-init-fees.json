@@ -1,0 +1,27 @@
+{
+    "expiration": "2025-01-01T00:00:00",
+    "actions": [
+        {
+            "account": "eosio.fees",
+            "name": "init",
+            "authorization": [
+                {
+                    "actor": "eosio.fees",
+                    "permission": "owner"
+                }
+            ],
+            "data": "58020000"
+        },
+        {
+            "account": "eosio.fees",
+            "name": "setstrategy",
+            "authorization": [
+                {
+                    "actor": "eosio.fees",
+                    "permission": "owner"
+                }
+            ],
+            "data": "00baba34ab6c264d1027"
+        }
+    ]
+}
