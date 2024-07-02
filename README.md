@@ -83,7 +83,8 @@ git checkout v1.0.0-rc1
 ## Contract `sha-256` checksums
 ```bash
 $ shasum -a 256 ./build/contracts/**/*.wasm
-32181be084b539d882d92ff85a3d0b9962c8cb7292902cc558bc9a77dedd8fa9  ./build/contracts/eosio.bpay/eosio.bpay.wasm
+90a0db1f7a4d1a7bccc5a5400edaa489ae685e0cd5b052de8440096139638efc  ./build/contracts/eosio.bpay/eosio.bpay.wasm
+17dd9c7a7a9f39c66a97d9c7d2ef2585f51af90b2a1c44cc2fd2265c1f804a8c  ./build/contracts/eosio.fees/eosio.fees.wasm
 49155e7e98991d9dad21970bb1d1cfec0d5ab77e842feaaa0dac1d1a91180cc7  ./build/contracts/eosio.reward/eosio.reward.wasm
 ad12d594b75bdb4ab84c568f29d97f1ce82f50cca55a1f8a7d0406d4728d0e4b  ./build/contracts/eosio.system/eosio.system.wasm
 ```
@@ -91,6 +92,7 @@ ad12d594b75bdb4ab84c568f29d97f1ce82f50cca55a1f8a7d0406d4728d0e4b  ./build/contra
 ```bash
 $ shasum -a 256 ./build/contracts/**/*.abi
 1cef6917b10be533e0ea66d794c50973f023002e608e33280277e74c79aa8dcc  ./build/contracts/eosio.bpay/eosio.bpay.abi
+1b7153927691bc464602f0aadd8badfa25e92926342e6294967ad2f2cc66564e  ./build/contracts/eosio.fees/eosio.fees.abi
 3254b63a2727591f51a28aceef9305988aec9b025fd1bae97b3ebc33ac687926  ./build/contracts/eosio.reward/eosio.reward.abi
 c3a51886165436519ed0c6aa0854e6b777c1564b030a6f2c3a0e0a568104cef2  ./build/contracts/eosio.system/eosio.system.abi
 ```
@@ -99,15 +101,12 @@ c3a51886165436519ed0c6aa0854e6b777c1564b030a6f2c3a0e0a568104cef2  ./build/contra
 
 #### Deploy System Contracts
 
-https://github.com/eosnetworkfoundation/eos-system-contracts/releases/tag/v3.5.0-rc1
-
-https://github.com/eosnetworkfoundation/eosio.reward/releases/tag/v1.0.0-rc1
-
-- [x] 1.1 Deploy updated `eosio` system contract including REX 2.0
-- [x] 1.2 Deploy new `eosio.reward` contract
-- [x] 1.3 Deploy new `eosio.bpay` contract
-  - [x] 1.3.0 Buy 200KB of RAM for `eosio.bpay` contract
-  - [x] 1.3.1 Update permission `eosio.bpay` (15/21) (`eosio` + `@eosio.code`)
+- [x] 1.1 Deploy updated [`eosio` v3.5.0-rc1](https://github.com/eosnetworkfoundation/eos-system-contracts/releases/tag/v3.5.0-rc1) system contract including REX 2.0
+- [x] 1.2 Deploy updated [`eosio.fees` v1.0.1](https://github.com/eosnetworkfoundation/eosio.fees/releases/tag/v1.0.1) contract
+- [x] 1.3 Deploy new [`eosio.reward` v1.0.0-rc1](https://github.com/eosnetworkfoundation/eosio.reward/releases/tag/v1.0.0-rc1) contract
+- [x] 1.4 Deploy new [`eosio.bpay` v3.5.0-rc2](https://github.com/eosnetworkfoundation/eos-system-contracts/releases/tag/v3.5.0-rc2) contract
+  - [x] 1.4.0 Purchase 250KB of RAM for `eosio.bpay` contract
+  - [x] 1.4.1 Update permission `eosio.bpay` (15/21) (`eosio` + `@eosio.code`)
 
 #### Configure System Fees & Staking Rewards strategies
 

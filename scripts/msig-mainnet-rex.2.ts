@@ -5,18 +5,20 @@ import { buyrambytes, delstrategy, setrexmature, setstrategy, transaction } from
 import eosio_system from '../actions/setcontract-eosio.system.json';
 import eosio_bpay from '../actions/setcontract-eosio.bpay.json';
 import eosio_reward from '../actions/setcontract-eosio.reward.json';
+import eosio_fees from '../actions/setcontract-eosio.fees.json';
 import eosio_bpay_update_auth from '../actions/updateauth-eosio.bpay.json';
 
 // actions
 import { checktime } from "./msig-actions.js";
 
 // 1.3.0 Buy RAM for `eosio.bpay` account
-buyrambytes("eosio", "eosio.bpay", 200000);
+buyrambytes("eosio", "eosio.bpay", 250000);
 
 // 1.1 Deploy updated `eosio` system contract including REX 2.0
 // 1.2 Deploy new `eosio.reward` contract
 // 1.3 Deploy new `eosio.bpay` contract
-for ( const setcontract of [ eosio_system, eosio_bpay, eosio_reward ] ) {
+// 1.4 Deploy new `eosio.fees` contract
+for ( const setcontract of [ eosio_system, eosio_bpay, eosio_reward, eosio_fees ] ) {
     transaction.actions.push(...setcontract.actions);
 }
 
@@ -31,7 +33,6 @@ delstrategy("eosio.fees", "donatetorex");
 
 // 2.3 Set incoming staking reward allocation to 100% going to REX via `eosio.rex` strategy
 setstrategy("eosio.reward", "eosio.rex", 10000);
-
 
 // 3.1 Set REX maturity to `21 periods` (previously `5 periods`)
 // 3.2 Set matured REX is sold immediately to `true`
