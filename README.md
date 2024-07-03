@@ -142,7 +142,7 @@ c3a51886165436519ed0c6aa0854e6b777c1564b030a6f2c3a0e0a568104cef2  ./build/contra
 
 #### Configure REX 2.0 features
 
-- [x] 3.1 Set REX maturity to `21 periods` (previously `5 periods`)
+- [x] 3.1 Set REX maturity to 21 periods (21 days unstaking)
 - [x] 3.2 Set matured REX is sold immediately to `true`
 - [x] 3.3 Set buying REX is moved immediately to REX savings to `true`
 
